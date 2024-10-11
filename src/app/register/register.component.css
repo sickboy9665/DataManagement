@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+}
+
+.register-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.register-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="confirmPassword"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: #333;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .register-container h1 {
+        font-size: 20px;
+    }
+
+    .register-container input[type="email"],
+    .register-container input[type="password"],
+    .register-container button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 15px;
+    }
+
+    .register-container h1 {
+        font-size: 18px;
+    }
+
+    .register-container input[type="email"],
+    .register-container input[type="password"],
+    .register-container button {
+        font-size: 12px;
+    }
+}

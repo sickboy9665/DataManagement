@@ -1,0 +1,39 @@
+<body>
+  <div class="register-container" style="background-color: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; width: 300px;">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <h1>Register</h1>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+          <span *ngIf="email?.errors?.['required']">Email is required</span>
+          <span *ngIf="email?.errors?.['email']">Enter a valid email</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Enter your password">
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error">
+          <span *ngIf="password?.errors?.['required']">Password is required</span>
+          <span *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password">
+        <div *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)" class="error">
+          <span *ngIf="confirmPassword?.errors?.['required']">Confirm Password is required</span>
+          <span *ngIf="confirmPassword?.errors?.['minlength']">Confirm Password must be at least 6 characters</span>
+          <span *ngIf="confirmPassword?.errors?.['mustMatch']">Passwords must match</span>
+        </div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div style="margin-top: 20px;">
+      <p>Already have an account? <a routerLink="/contactapp/login">Login here</a></p>
+    </div>
+    
+  </div>
+</body>

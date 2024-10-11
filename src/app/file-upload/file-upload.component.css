@@ -1,0 +1,358 @@
+
+.file-upload-container {
+    position: relative;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  label {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  label:hover {
+    background-color: #0056b3;
+  }
+  
+  .progress-container {
+    position: relative;
+    height: 24px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+
+.parenttag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* margin: 0; */
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    margin-bottom: -100px;
+}
+.file-upload-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* border: 2px solid orange; */
+    width: 400px;
+    margin-bottom: 25%;
+}
+.file-upload-container i {
+    font-size: 50px;
+    color: #2c2c2c;
+}
+.file-upload-container p {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.file-upload-container .file-info {
+    font-size: 14px;
+    color: #666;
+}
+.file-upload-container .file-input {
+    display: none;
+}
+.file-upload-container label {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.file-upload-container .upload-btn {
+    border: 2px solid #8e44ad;
+    color: white;
+    background-color: #8e44ad;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.file-upload-container .upload-btn:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+.file-upload-container .progress-container {
+    margin-top: 20px;
+}
+.file-upload-container .progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #0f9d58;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+.file-upload-container .progress-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.file-upload-container .error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* slider */
+.scroll-down-button {
+  position: absolute;
+  bottom: 20px;
+  /* left: 50%; */
+  left: 90%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  bottom: 200px;
+  /* margin-left: 60px; */
+}
+
+.arrow-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #090c09;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.arrow-container i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.arrow-containerdown{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #090c09;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.arrow-containerdown i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.scroll-down-button p {
+  font-size: 16px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes hinge {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hinge {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.scroll-up-button {
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1230px;
+  left: 90%;
+
+}
+
+.scroll-up-button p {
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+}
+
+
+/* GRID STYLES */
+#grid-container {
+margin-top: 30px;
+height: 400px;
+padding: 20px
+}
+
+#grid-container {
+  margin-top: 30px;
+  height: 400px;
+  padding: 20px;
+  /* background-color: #f9f9f9;  */
+}
+
+
+/* .example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d5e6f9;
+  border: 2px solid #f9f8f7;
+  border-radius: 10px;
+} */
+
+.example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #e3f2fd, #bbdefb); /* Soft blue gradient */
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 1px; /* Padding to give more breathing room */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.button-style1 {
+  background-color: #6200ea; /* Indigo as the primary button color */
+  color: #ffffff; /* White text for better contrast */
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for more spacious buttons */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+  border: none; /* Remove border for a cleaner look */
+  margin-right: -500px; /* Space between buttons */
+}
+
+.button-style{
+  background-color: #6200ea; /* Indigo as the primary button color */
+  color: #ffffff; /* White text for better contrast */
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for more spacious buttons */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+  border: none; /* Remove border for a cleaner look */
+  margin-right: -450px; /* Space between buttons */
+}
+
+.button-style1:hover {
+  background-color: #3700b3; /* Darker Indigo on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.button-style:hover{
+  background-color: #3700b3; /* Darker Indigo on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.heading-text-box {
+  font-size: 20px; /* Slightly larger font */
+  font-weight: bold;
+  color: #333333; /* Dark gray */
+  padding: 10px;
+}
+
+.filter-container {
+  position: relative;
+  width: 200px; /* Consistent width */
+}
+
+.filter-text-box {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #c7c9ce;
+  border-radius: 12px;
+  padding: 10px 15px; /* Slightly larger padding */
+  font-size: 16px;
+  width: 210px;
+  margin-left: -50px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #666666; /* Darker icon color */
+}
+
+.ag-theme-quartz {
+  --ag-background-color: #ffffff;
+  --ag-foreground-color: #424242;
+  --ag-border-color: rgba(0, 0, 0, 0.12); /* Subtle borders */
+  --ag-header-background-color: #a4d8fb;
+  --ag-header-foreground-color: #333333; /* Darker text for headers */
+  --ag-row-hover-color: rgba(98, 0, 234, 0.1); /* Soft Indigo for hover */
+  --ag-selected-row-background-color: rgba(98, 0, 234, 0.15); /* Light Indigo for selected rows */
+}
+
+
+
+
+

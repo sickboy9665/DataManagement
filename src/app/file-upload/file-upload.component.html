@@ -1,0 +1,97 @@
+
+<!-- Upload Section -->
+<div class="parenttag">
+<div class="file-upload-container" (dragover)="allowDrop($event)" (drop)="dropFile($event)">
+    <i class="fas fa-cloud-upload-alt"></i>
+    <p>Drag & Drop your files here<br>or click to upload</p>
+    <p class="file-info">Accepted formats: .csv</p>
+    <input type="file" (change)="onFileSelected($event)" class="file-input" id="fileInput" />
+    <label for="fileInput">Browse Files</label>
+    <div *ngIf="fileName">Selected File: {{ fileName }}</div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar" [style.width]="uploadProgress + '%'">{{ uploadProgress }}%</div>
+    </div>
+</div>
+</div>
+<div class="scroll-down-button" (click)="scrollToBottom()">
+    <div class="arrow-container">
+      <i class="fas fa-angle-down animated hinge"></i>
+    </div>
+    <p>Check Existing Data</p>
+  </div>
+  
+<!-- <div class="ag-theme-material" class="grid"> -->
+<!-- Grid Section (Initially Hidden) -->
+<!-- <div class="example-wrapper"> -->
+<!-- <div class="example-header">
+    
+    <div class="heading-text-box" style="margin-left: 10px;">Contact Information</div>
+    <button class="button-style" (click)="setDuplicateHighlight()">
+        {{ highlightDuplicatesActive ? 'Revert Duplicates' : 'Highlight Duplicates' }}
+    </button>
+    <button class="button-style" (click)="removeDuplicates()">Remove Duplicates</button>    
+    <div class="filter-container">
+        
+        <input
+            type="text"
+            id="filter-text-box"
+            placeholder="Filter..."
+            (input)="onFilterTextBoxChanged()"
+        />
+        <i class="fas fa-search search-icon"></i>
+    </div>
+</div> -->
+    
+<!-- </div> -->
+
+<div class="ag-theme-quartz" id="grid-container" *ngIf="gridVisible">
+    <div class="example-header">
+        <div class="heading-text-box">Contact Information</div>
+
+        <!-- Button to Highlight Duplicates -->
+        <button class="button-style1" (click)="setDuplicateHighlight()">
+            {{ highlightDuplicatesActive ? 'Revert Duplicates' : 'Highlight Duplicates' }}
+        </button>
+
+        <!-- Button to Remove Duplicates -->
+        <button class="button-style" (click)="removeDuplicates()">Remove Duplicates</button>
+
+        <!-- Filter input box with search icon -->
+        <div class="filter-container">
+            <input
+                id="forgrid"
+                type="text"
+                class="filter-text-box"
+                placeholder="Filter..."
+                (input)="onFilterTextBoxChanged()"
+            />
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </div>
+
+    <!-- AG Grid Section -->
+    <ag-grid-angular
+        style="width: 100%; height: 100%;"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [class]="themeClass"
+        [pagination]="true"
+        [paginationPageSize]="10"
+        (gridReady)="onGridReady($event)"
+        [autoSizeStrategy]="autoSizeStrategy"
+        [rowClassRules]="rowClassRules"
+        [gridOptions]="gridOptions"
+        [getRowStyle]="getRowStyle"
+    ></ag-grid-angular>
+</div>
+
+
+<div *ngIf="gridVisible" (click)="scrollToTop()" class="scroll-up-button">
+    <div class="arrow-containerdown">
+        <i class="fas fa-angle-up animated hinge"></i>
+    </div>
+    <p>Go Up</p>
+</div>
+<div id="sample"></div>
+<!-- </div> -->

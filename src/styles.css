@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+/* Quartz Theme Specific CSS */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-material.min.css';
+
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+@import 'ag-grid-community/styles/ag-theme-balham.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+
+.ag-paging-panel {
+    border-top: 1px solid;
+    border-top-color: rgb(105 26 26 / 12%);
+    color: #101010;
+    background-color: #effafd;
+    height: var(--ag-header-height);
+}
+/* .duplicate-row {
+    background-color: beige;
+} */
+
+/* html, body { height: 100%; } */
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+/* body.mat-typography {
+    background-color: #fff;
+} */

@@ -1,0 +1,20 @@
+<!-- <nav class="navbar">
+    <div class="logo">Contact Manager</div>
+    <ul class="nav-links">
+      <li><a *ngIf="isLoggedIn" routerLink="/contactapp/dashboard">Dashboard</a></li>
+      <li><a *ngIf="isLoggedIn" routerLink="/contactapp/fileupload">Contacts</a></li>
+      <li><a *ngIf="isLoggedIn" routerLink="/contactapp/login" (click)="logout()">Logout</a></li>
+    </ul>
+</nav> -->
+<!-- <router-outlet></router-outlet>  Place where different components will load -->
+  
+<div class="navbardiv">
+  <nav class="navbar">
+    <div id="txtwhite" class="logo text-white">Contact Manager</div>
+    <ul class="nav-links">
+      <li><a id="textwhite" *ngIf="isLoggedIn" routerLink="/contactapp/dashboard" class="text-white router-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+      <li><a id="textwhite" *ngIf="isLoggedIn" routerLink="/contactapp/fileupload" class="text-white router-link"><i class="fas fa-address-book"></i> Contacts</a></li>
+      <li><a id="textwhite" *ngIf="isLoggedIn" routerLink="/contactapp/login" (click)="logout()" class="text-white router-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </nav>
+</div>
