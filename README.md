@@ -1,3 +1,6 @@
+Contacts/Data Management frontend with JWT login and visualization with charts and Aggrid datagrid.
+
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
